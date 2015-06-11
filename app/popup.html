@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/main.css -->
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/jquery-ui.min.css" rel="stylesheet">
+    <link href="styles/jqueryui1.8.20-chrome-extension.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div class="title">
+      <h1>采淘</h1>
+    </div>
+    <form class="conditions" action="index.html" method="post">
+      <div class="input">
+        <label for="input_tag">标签名称</label>
+        <br/>
+        <input type="text" id="input_tag" tabindex='-1' title="目前只支持a标签，因为商品的ID一般都在a标签的URL中存在" name="tag" value="a" placeholder="a"/>
+      </div>
+      <div class="input">
+        <label for="input_attr">标签属性</label>
+        <br/>
+        <input type="text" id="input_attr" tabindex='-1' title="目前所检查的标签的属性，该属性包含商品的ID。" name="attr" value="href" placeholder="href"/>
+      </div>
+      <div class="input">
+        <label for="input_regular">字符串规则</label>
+        <br/>
+        <input type="text" id="input_regular" tabindex='-1' title="需要匹配的字符串正则，比如天猫年终大促的匹配规则是:^.*ITEM_(\d+)\_.*" name="regular" value="^.*ITEM\\_(\\d+)\\_.*" placeholder="^.*ITEM\\_(\\d+)\\_.*"/>
+      </div>
+    </form>
+    <div class="button">
+      <button type="button" name="button" autofocus="autofocus">确定</button>
+    </div>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/popup.js -->
+    <script src="scripts/jquery-1.11.3.min.js"></script>
+    <script src="scripts/popup.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
