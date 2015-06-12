@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="title">
-      <h1>采淘</h1>
+      <h1>采   淘</h1>
     </div>
     <form class="conditions" action="index.html" method="post">
       <div class="input input_tag ui-widget">
@@ -37,13 +37,20 @@
         <label for="input_regular" title="需要匹配的字符串正则，比如天猫年终大促的匹配规则是:^.*ITEM_(\d+)\_.*">字符串规则&nbsp:</label>
         <!-- <input type="text" id="input_regular" tabindex='-1' title="需要匹配的字符串正则，比如天猫年终大促的匹配规则是:^.*ITEM_(\d+)\_.*" name="regular" value="^.*ITEM\\_(\\d+)\\_.*" placeholder="^.*ITEM\\_(\\d+)\\_.*"/> -->
         <select id="input_regular" tabindex='-1'  name="regular">
-          <option value="^.*id\\=(\\d{11})\\&.*">^.*id\\=(\\d{11})\\&.*</option>
-          <option value="^.*ITEM\\_(\\d+)\\_.*">^.*ITEM\\_(\\d+)\\_.*</option>
+          <option value="^.*id\\=(\\d{11})\\&.*">^.*id\\=(\\d{11}).*</option>
+          <option value="^.*ITEM\\_(\\d+)\\_.*">^.*ITEM\\_(\\d{11})\\_.*</option>
         </select>
       </div>
     </form>
-    <div class="button">
-      <button type="button" name="button" autofocus="autofocus">确定</button>
+    <div class="bottom">
+      <div class="logo">
+          <span href="http://zhping.tv/">
+            <img src="images/logo.png" alt="Copyright (c) 2016 zhping.tv All Rights Reserved." height="45px" width="120px"/>
+          </span>
+      </div>
+      <div class="button">
+        <button type="button" name="button" autofocus="autofocus">确定</button>
+      </div>
     </div>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

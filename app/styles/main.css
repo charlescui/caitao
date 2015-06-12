@@ -5,14 +5,18 @@ body {
   overflow: hidden;
   margin: 0px;
   padding: 0px;
-  background: white;
+  background: rgba(0, 17, 55, 0.83);
 }
 
 div.title {
   align-content: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -8px;
+  margin-bottom: -12px;
   TEXT-ALIGN: center;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
 }
 
 div.input {
@@ -22,12 +26,26 @@ div.input {
   margin-top: 3px;
 }
 
+div.input,.label{
+  color: rgb(255, 255, 255);
+}
+
 div.button {
-  margin-top: 20px;
   align-content: center;
   margin-left: 5px;
-  margin-right: auto;
+  margin-right: 44px;
   TEXT-ALIGN: center;
+  float: right;
+}
+
+div.logo {
+  margin-left: 10px;
+  float: left;
+}
+
+div.bottom {
+  width: 100%;
+  margin-top: 20px;
 }
 
 button {

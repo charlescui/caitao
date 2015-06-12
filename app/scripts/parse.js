@@ -27,26 +27,31 @@ function copyToClipBoard(content){
 
 // 通过浮层展示URL清单
 function show_urls(arr){
+  var title = "采淘";
   if (arr.length > 0) {
+    title = title + " - " + "本次采集" + arr.length + "条";
     var content = $(arr).map(function(idx, e){
         return e;
     }).get();
   }else{
+    title = title + " - " + "没有找到任何数据"
     var content = ["没有找到任何数据"];
   }
 
   var rows = (content.length < 50) ? content.length : 50;
-  var area = '<textarea id="dialog_textarea" style="border:0;background:none" readonly="value" rows="'+rows+'" cols="200">'+content.join("\r\n")+'</textarea>';
+  var area = '<textarea id="dialog_textarea" style="max-height:200px;border:0;background:none;margin-left:10px;" readonly="value" rows="'+rows+'" cols="50">'+content.join("\r\n")+'</textarea>';
 
   ctx = '<div id="MenuDialog">'+area+'</div>';
   var dig = $(ctx);
+
   dig.dialog({
     modal: false,
-    title: "采淘",
+    title: title,
     show: 'clip',
     hide: 'clip',
     zIndex: 9999,
     width: 420,
+    'max-height': 480,
     buttons: [
         {text: "全选", click: function() {copyToClipBoard(content.join("\n"))}},
         {text: "关闭", click: function() {$(this).dialog("close")}}
