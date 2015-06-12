@@ -13,7 +13,8 @@ function do_parse(tag, attr, pattern){
       console.log(link);
     }
   });
-  show_urls(lists);
+  // 去掉重复项
+  show_urls($.unique(lists));
 };
 
 // Chrome无效

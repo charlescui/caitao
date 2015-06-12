@@ -8,8 +8,7 @@
     <!-- endbuild -->
     <!-- build:css styles/main.css -->
     <link href="styles/main.css" rel="stylesheet">
-    <link href="styles/jquery-ui.min.css" rel="stylesheet">
-    <link href="styles/jqueryui1.8.20-chrome-extension.css">
+    <link href="jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet">
     <!-- endbuild -->
   </head>
   <body>
@@ -17,20 +16,29 @@
       <h1>采淘</h1>
     </div>
     <form class="conditions" action="index.html" method="post">
-      <div class="input">
-        <label for="input_tag">标签名称</label>
-        <br/>
-        <input type="text" id="input_tag" tabindex='-1' title="目前只支持a标签，因为商品的ID一般都在a标签的URL中存在" name="tag" value="a" placeholder="a"/>
+      <div class="input ui-widget">
+        <label for="input_tag" title="商品的ID一般都在a标签的URL中存在">标签名称&nbsp&nbsp&nbsp&nbsp:</label>
+        <!-- <input type="text" id="input_tag" tabindex='-1' title="目前只支持a标签，因为商品的ID一般都在a标签的URL中存在" name="tag" value="a" placeholder="a"/> -->
+        <select id="input_tag" tabindex='-1'name="tag">
+          <option value="a">a</option>
+          <option value="img">img</option>
+          <option value="span">span</option>
+        </select>
       </div>
-      <div class="input">
-        <label for="input_attr">标签属性</label>
-        <br/>
-        <input type="text" id="input_attr" tabindex='-1' title="目前所检查的标签的属性，该属性包含商品的ID。" name="attr" value="href" placeholder="href"/>
+      <div class="input ui-widget">
+        <label for="input_attr" title="目前所检查的标签的属性，该属性包含商品的ID。">标签属性&nbsp&nbsp&nbsp&nbsp:</label>
+        <!-- <input type="text" id="input_attr" tabindex='-1' title="目前所检查的标签的属性，该属性包含商品的ID。" name="attr" value="href" placeholder="href"/> -->
+        <select id="input_attr" tabindex='-1' name="attr">
+          <option value="href">href</option>
+          <option value="src">src</option>
+        </select>
       </div>
-      <div class="input">
-        <label for="input_regular">字符串规则</label>
-        <br/>
-        <input type="text" id="input_regular" tabindex='-1' title="需要匹配的字符串正则，比如天猫年终大促的匹配规则是:^.*ITEM_(\d+)\_.*" name="regular" value="^.*ITEM\\_(\\d+)\\_.*" placeholder="^.*ITEM\\_(\\d+)\\_.*"/>
+      <div class="input ui-widget">
+        <label for="input_regular" title="需要匹配的字符串正则，比如天猫年终大促的匹配规则是:^.*ITEM_(\d+)\_.*">字符串规则&nbsp:</label>
+        <!-- <input type="text" id="input_regular" tabindex='-1' title="需要匹配的字符串正则，比如天猫年终大促的匹配规则是:^.*ITEM_(\d+)\_.*" name="regular" value="^.*ITEM\\_(\\d+)\\_.*" placeholder="^.*ITEM\\_(\\d+)\\_.*"/> -->
+        <select id="input_regular" tabindex='-1'  name="regular">
+          <option value="^.*ITEM\\_(\\d+)\\_.*">^.*ITEM\\_(\\d+)\\_.*</option>
+        </select>
       </div>
     </form>
     <div class="button">
@@ -43,8 +51,8 @@
 
     <!-- build:js scripts/popup.js -->
     <script src="scripts/jquery-1.11.3.min.js"></script>
+    <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
     <script src="scripts/popup.js"></script>
-    <script src="scripts/jquery-ui.min.js"></script>
     <!-- endbuild -->
   </body>
 </html>
