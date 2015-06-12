@@ -4,4 +4,4 @@
 
 ### GIF演示
 
-![演示](https://github.com/charlescui/caitao/raw/master/images/caitao.gif)
+![演示](https://github.com/charlescui/caitao/raw/master/app/images/caitao.gif)
