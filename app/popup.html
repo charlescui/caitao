@@ -16,7 +16,7 @@
       <h1>采淘</h1>
     </div>
     <form class="conditions" action="index.html" method="post">
-      <div class="input ui-widget">
+      <div class="input input_tag ui-widget">
         <label for="input_tag" title="商品的ID一般都在a标签的URL中存在">标签名称&nbsp&nbsp&nbsp&nbsp:</label>
         <!-- <input type="text" id="input_tag" tabindex='-1' title="目前只支持a标签，因为商品的ID一般都在a标签的URL中存在" name="tag" value="a" placeholder="a"/> -->
         <select id="input_tag" tabindex='-1'name="tag">
@@ -25,7 +25,7 @@
           <option value="span">span</option>
         </select>
       </div>
-      <div class="input ui-widget">
+      <div class="input input_attr ui-widget">
         <label for="input_attr" title="目前所检查的标签的属性，该属性包含商品的ID。">标签属性&nbsp&nbsp&nbsp&nbsp:</label>
         <!-- <input type="text" id="input_attr" tabindex='-1' title="目前所检查的标签的属性，该属性包含商品的ID。" name="attr" value="href" placeholder="href"/> -->
         <select id="input_attr" tabindex='-1' name="attr">
@@ -33,10 +33,11 @@
           <option value="src">src</option>
         </select>
       </div>
-      <div class="input ui-widget">
+      <div class="input input_regular ui-widget">
         <label for="input_regular" title="需要匹配的字符串正则，比如天猫年终大促的匹配规则是:^.*ITEM_(\d+)\_.*">字符串规则&nbsp:</label>
         <!-- <input type="text" id="input_regular" tabindex='-1' title="需要匹配的字符串正则，比如天猫年终大促的匹配规则是:^.*ITEM_(\d+)\_.*" name="regular" value="^.*ITEM\\_(\\d+)\\_.*" placeholder="^.*ITEM\\_(\\d+)\\_.*"/> -->
         <select id="input_regular" tabindex='-1'  name="regular">
+          <option value="^.*id\\=(\\d{11})\\&.*">^.*id\\=(\\d{11})\\&.*</option>
           <option value="^.*ITEM\\_(\\d+)\\_.*">^.*ITEM\\_(\\d+)\\_.*</option>
         </select>
       </div>
